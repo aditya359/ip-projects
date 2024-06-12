@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        emp = [
+              {'name': "aditya", 'salary' : 250000},
+              {'name': "yash", 'salary' : 350000},
+              {'name': "shivam", 'salary' : 450000}
+        ]
+        average = 0
+        max = 0
+        min = emp[0]['salary']
+        for (var i = 0; i < emp.length ; i++) {
+            console.log(`Hello ${emp[i]['name']} your salary is ${emp[i]['salary']}`)
+            average += emp[i]['salary']
+            if(max < emp[i]['salary']){
+                max = emp[i]['salary']
+            }
+            if (min > emp[i]['salary']){
+                min = emp[i]['salary']
+            }
+        }
+        for(var i = 0 ; i<emp.length; i++){
+            if(emp[i]['salary'] == max){
+                console.log(`${emp[i]['name']} has max salary ${emp[i]['salary']}`)
+                }
+            if (emp[i]['salary'] == min) {
+                console.log(`${emp[i]['name']} has min salary ${emp[i]['salary']}`)
+            }
+        }
+        average = average / emp.length
+        console.log(average)
+        rec = {
+            name: "aditya",
+            age: 20,
+            height: 5.6,
+            weight: 60,
+            hobbies: ["playing","coding","sleeping"],
+            city: "pune",
+            state: "maharashtra",
+            pincode: 411018,
+            location: {
+                lat: 18.5204,
+                long: 73.8567
+            }
+        }
+        console.log(rec)
+    </script>
+    <script>
+        function add(a,b){
+                console.log(a+b)
+        }
+        function square(a){
+                console.log(a**2)
+        }
+        function printstring(num, str){
+            for (var i=0; i< num ; i++) {
+                console.log(str)
+            }
+        }
+        add(2,3)
+        square(4)
+        printstring(3, "hello")
+        member = [
+              {'name': "aditya", 'age' : 25},
+              {'name': "yash", 'age' : 15},
+              {'name': "shivam", 'age' : 45}
+        ]
+        function agecheck(arr){
+            for (var i = 0; i < arr.length ; i++) {
+                if (arr[i]['age'] >= 21){
+                    console.log(`${arr[i]['name']} age ${arr[i]['age']} is eligible to drink`)
+                }
+                else{
+                    console.log(`${arr[i]['name']} age ${arr[i]['age']} is not eligible to drink`)
+                }
+            }
+        }
+        agecheck(member)
+        dis = 1
+        free = 0
+        function breezer(number){
+            for (var i = 0; i < number + 1; i++) {
+                if (dis == 6){
+                    free = free + 1
+                    dis = 1
+                }
+                else{
+                    dis = dis + 1
+                }
+            }
+            return console.log(number + free)
+        }
+        breezer(18)
+    </script>
+</body>
+</html>

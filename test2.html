@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "oe" onclick=test() >Answer</h1>
+    <input type="text" id = "num" placeholder="enter a number 1">
+    <input type="text" id = "num2" placeholder="enter a number 2 ">
+    <button id = "one" onclick=test()>Square</button>
+    <button id = "two" onclick=add()>add</button>
+</body>
+<script>
+    function test(){
+        x = document.getElementById("num").value;
+        document.getElementById("oe").innerHTML = Math.sqrt(x);
+    }
+    function add(){
+        x = document.getElementById("num").value;
+        y = document.getElementById("num2").value;
+        document.getElementById("oe").innerHTML = parseFloat(x) + parseFloat(y);
+    }
+</script>
+</html>
